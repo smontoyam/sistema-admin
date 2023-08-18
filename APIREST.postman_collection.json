@@ -1,0 +1,1250 @@
+{
+	"info": {
+		"_postman_id": "f924bb12-95bc-4112-8b5c-43231e820ff5",
+		"name": "APIREST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27151654"
+	},
+	"item": [
+		{
+			"name": "GET - Seleccionar dato especifico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/courses?select=id_course",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "title_course,id_instructor_course",
+							"disabled": true
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL_2",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "id_course"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Filtro de un solo valor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/courses?linkTo=&equalTo=&select=*",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": ""
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": ""
+						},
+						{
+							"key": "select",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Filtro de varios valores",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/courses?linkTo=title_course,id_instructor_course&equalTo=Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL,2&select=id_course,title_course,description_course,id_instructor_course",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "title_course,id_instructor_course"
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL,2"
+						},
+						{
+							"key": "select",
+							"value": "id_course,title_course,description_course,id_instructor_course"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET -Ordenar datos sin filtro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/courses?select=*&orderBy=id_course&orderMode=DESC",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "title_course,id_instructor_course",
+							"disabled": true
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL_2",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET -Ordenar datos con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/courses?linkTo=id_instructor_course&equalTo=2&select=*&orderBy=title_course&orderMode=DESC",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "id_instructor_course"
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "2"
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "orderBy",
+							"value": "title_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET -Limitar datos sin filtro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/courses?select=*&orderBy=id_course&orderMode=DESC&startAt=0&endAt=5",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "id_instructor_course",
+							"disabled": true
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET -Limitar datos con filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title_course",
+							"value": "Aprende PHP desde 0",
+							"type": "text"
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende las bases",
+							"type": "text"
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/1075334_8b5f_4.jpg",
+							"type": "text"
+						},
+						{
+							"key": "price_course",
+							"value": "88.89",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "apirest.com/courses",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entra tablas sin filtro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/relations?select=name_instructor,title_course,id_course&rel=courses,instructors&type=course,instructor&orderBy=id_course&orderMode=ASC&startAt=0&endAt=6",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "title_course,id_instructor_course",
+							"disabled": true
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL_2",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "name_instructor,title_course,id_course"
+						},
+						{
+							"key": "rel",
+							"value": "courses,instructors"
+						},
+						{
+							"key": "type",
+							"value": "course,instructor"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entra tablas con filtro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/relations?linkTo=name_country&equalTo=Colombia&select=name_country,initial_code,digit_dialcode&rel=countries,codes,dialcodes&type=country,code,dialcode",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "name_country"
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Colombia"
+						},
+						{
+							"key": "select",
+							"value": "name_country,initial_code,digit_dialcode"
+						},
+						{
+							"key": "rel",
+							"value": "countries,codes,dialcodes"
+						},
+						{
+							"key": "type",
+							"value": "country,code,dialcode"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_country",
+							"disabled": true
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "6",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda sin filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/products?linkTo=name_product&select=*&search=Samsung",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "name_product"
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "search",
+							"value": "Samsung"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda con filtros y sin relaciones",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/products?linkTo=name_product,id_category_product&select=*&search=Sound,3",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "name_product,id_category_product"
+						},
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "search",
+							"value": "Sound,3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda con filtros y con relaciones",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/relations?select=name_product,name_category&rel=products,categories&type=product,category&search=Sound,3&linkTo=name_product,id_category_product",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "linkto",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "name_product,name_category"
+						},
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "search",
+							"value": "Sound,3"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_product,id_category_product"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/products?select=*&linkTo=date_created_product&between1=2021-01-01&between2=2021-04-30&filterTo=id_category_product&inTo=1,2",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_product"
+						},
+						{
+							"key": "between1",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "between2",
+							"value": "2021-04-30"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_category_product"
+						},
+						{
+							"key": "search",
+							"value": "Sound_3",
+							"disabled": true
+						},
+						{
+							"key": "rel",
+							"value": "products,categories",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "product,category",
+							"disabled": true
+						},
+						{
+							"key": "inTo",
+							"value": "1,2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos entre relaciones con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "apirest.com/relations?select=name_product,name_category,date_created_product&linkTo=date_created_product&between1=2021-01-01&between2=2021-04-30&filterTo=id_category_product&rel=products,categories&type=product,category&inTo=1",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "name_product,name_category,date_created_product"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_product"
+						},
+						{
+							"key": "between1",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "between2",
+							"value": "2021-04-30"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_category_product"
+						},
+						{
+							"key": "search",
+							"value": "Sound_3",
+							"disabled": true
+						},
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "inTo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Crear registros",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title_course",
+							"value": "Aprende PHP ok autorizado",
+							"type": "text"
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende todas las bases",
+							"type": "text"
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "66",
+							"type": "text"
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"type": "text"
+						},
+						{
+							"key": "price_course",
+							"value": "888",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "apirest.com/courses?token=no&table=instructors&suffix=instructor&except=id_course",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "no"
+						},
+						{
+							"key": "table",
+							"value": "instructors"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						},
+						{
+							"key": "price_course",
+							"value": "888",
+							"disabled": true
+						},
+						{
+							"key": "except",
+							"value": "id_course"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Actualizar registros",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title_course",
+							"value": "funcion update",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "ahora funciona",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "12",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "apirest.com/courses?id=100&nameId=id_course&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODcwMTE4MjYsImV4cCI6MTY4NzA5ODIyNiwiZGF0YSI6eyJpZCI6MjcsImVtYWlsIjoiaW5zdHJ1Y3RvckBjb3JyZW8uY29tIiwiYWxnIjoiSFMyNTYifX0.V3V-dDp6rzsJ321GPFtIlNfQmZLr1XuIQWHoAQG5ki0&table=instructors&suffix=instructor",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "100"
+						},
+						{
+							"key": "nameId",
+							"value": "id_course"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODcwMTE4MjYsImV4cCI6MTY4NzA5ODIyNiwiZGF0YSI6eyJpZCI6MjcsImVtYWlsIjoiaW5zdHJ1Y3RvckBjb3JyZW8uY29tIiwiYWxnIjoiSFMyNTYifX0.V3V-dDp6rzsJ321GPFtIlNfQmZLr1XuIQWHoAQG5ki0"
+						},
+						{
+							"key": "table",
+							"value": "instructors"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Eliminar registros",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title_course",
+							"value": "funcion update",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "ahora funciona",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "12",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "apirest.com/courses?id=69&nameId=id_course&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODcwMTE4MjYsImV4cCI6MTY4NzA5ODIyNiwiZGF0YSI6eyJpZCI6MjcsImVtYWlsIjoiaW5zdHJ1Y3RvckBjb3JyZW8uY29tIiwiYWxnIjoiSFMyNTYifX0.V3V-dDp6rzsJ321GPFtIlNfQmZLr1XuIQWHoAQG5ki0&table=instructors&suffix=instructor",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "69"
+						},
+						{
+							"key": "nameId",
+							"value": "id_course"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODcwMTE4MjYsImV4cCI6MTY4NzA5ODIyNiwiZGF0YSI6eyJpZCI6MjcsImVtYWlsIjoiaW5zdHJ1Y3RvckBjb3JyZW8uY29tIiwiYWxnIjoiSFMyNTYifX0.V3V-dDp6rzsJ321GPFtIlNfQmZLr1XuIQWHoAQG5ki0"
+						},
+						{
+							"key": "table",
+							"value": "instructors"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_instructor",
+							"value": "instructores@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password_instructor",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "14",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "888",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "apirest.com/instructors?register=true&suffix=instructor",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"instructors"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						},
+						{
+							"key": "title_course",
+							"value": "Aprende PHP",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende todas las bases",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "14",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "888",
+							"disabled": true
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login de usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3VhXW768m2GJ2fp",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_instructor",
+							"value": "instructor@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password_instructor",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "14",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "888",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "apirest.com/instructors?login=true&suffix=instructor",
+					"host": [
+						"apirest",
+						"com"
+					],
+					"path": [
+						"instructors"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						},
+						{
+							"key": "title_course",
+							"value": "Aprende PHP",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende todas las bases",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "14",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "https://i.udemycdn.com/course/480x270/980450_7fc0_3.jpg",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "888",
+							"disabled": true
+						},
+						{
+							"key": "date_created_course",
+							"value": "2021-10-27",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
